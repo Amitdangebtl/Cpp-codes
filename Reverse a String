@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void ReveseString(string &s)
+{
+    int first = 0;
+    int last = s.length()-1;
+    while(first<last)
+    {
+        swap(s[first],s[last]);
+        first++;
+        last--;
+    }
+}
+int main()
+{
+    string s;
+    cout<<"Enter String : ";
+    getline(cin,s);
+    ReveseString(s);
+    cout<<s;
+}
