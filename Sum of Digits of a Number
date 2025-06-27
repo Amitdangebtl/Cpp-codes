@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int sumOfDigitsNumber(int n)
+{
+    int sum =0;
+    while(n!=0)
+    {
+        int digit = n%10;
+        sum += digit;
+        n/=10;
+    }
+    return sum;
+}
+int main()
+{
+    int n;
+    cout<<"Enter Number : ";
+    cin>>n;
+    cout<<sumOfDigitsNumber(n);
+    return 0;
+    
+}
