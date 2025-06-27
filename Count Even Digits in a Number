@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int CountEvenDigits(int n)
+{
+    int count = 0 ;
+    while(n!=0)
+    {
+        int digit = n%10;
+        if(digit%2==0)
+        {
+            count++;
+        }
+        n/=10;
+    }
+    return count;
+}
+int main()
+{
+    int n;
+    cout<<"Enter Number : ";
+    cin>>n;
+    cout<<CountEvenDigits(n);
+    return 0;
+}
