@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void ReverseArray(int arr[],int n)
+{
+    int First = 0;
+    int Last = n-1;
+    while(First<Last)
+    {
+        swap(arr[First],arr[Last]);
+        First++;
+        Last--;
+    }
+}
+int main()
+{
+    int n;
+    cout<<"Enter Array size : ";
+    cin>>n;
+    int arr[n];
+    cout<<"Enter Elementes : ";
+    for(int i = 0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    ReverseArray(arr,n);
+    cout<<"Updated Array : ";
+    for(int i = 0;i<n;i++)
+    {
+        cout<<arr[i];
+    }
+    return 0 ;
+}
