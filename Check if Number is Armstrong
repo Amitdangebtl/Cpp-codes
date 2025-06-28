@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+bool isArmstrong(int n)
+{
+    int orignal = n;
+    int sum = 0;
+    int count = 0;
+    int temp = n;
+    while(temp!=0)
+    {
+        int digit = temp%10;
+        count++;
+        temp/=10;
+    }
+    temp = n;
+    while(temp!=0)
+    {
+        int total = temp%10;
+        sum += (int)pow(total,count);
+        temp/=10;
+    }
+    
+    return sum == orignal;
+}
+int main()
+{
+    int n;
+    cout<<"Enter Number : ";
+    cin>>n;
+    if(isArmstrong(n))
+    {
+        cout<<true;
+    }
+    else 
+    {
+        cout<<false;
+    }
+    return 0;
+}
