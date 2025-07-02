@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int countWordsWithKDigits(vector<int>&arr,int k)
+{
+    int count = 0;
+    for(int i = 0;i<arr.size();i++)
+    {
+        string num = to_string(arr[i]);
+        if(num.length() == k)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+int main() {
+   int n;
+   int k;
+   cout<<"Enter array Size: "<<endl;
+   cin>>n;
+   cout<<"Enter 'K' : "<<endl;
+   cin>>k;
+   vector<int>arr(n);
+   for(int i = 0;i<arr.size();i++)
+   {
+       cin>>arr[i];
+   }
+   cout<<countWordsWithKDigits(arr,k);
+   
+    return 0;
+}
