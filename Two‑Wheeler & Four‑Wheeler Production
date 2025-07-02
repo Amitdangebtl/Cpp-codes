@@ -1,0 +1,21 @@
+// Online C++ compiler to run C++ program online
+#include<bits/stdc++.h>
+using namespace std;
+
+void findVehicles(int v, int w)
+{
+    int tw = (4*v-w)/2;
+    int fw = v-tw;
+    
+    cout<<"Two Whalers : "<<tw<<" & Four Whalers : " <<fw<<endl;
+}
+int main()
+{
+    int v;
+    cout<<"Enter Total Vehicles : "<<endl;
+    cin>>v;
+    int w;
+    cout<<"Enter Total Wheels : "<<endl;
+    cin>>w;
+    findVehicles(v,w);
+}
