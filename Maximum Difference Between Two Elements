@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int MaximumDifferenceBetweenTwoElements(vector<int>arr)
+{
+    int max = arr[0];int diffMax = INT_MIN;
+    for(int i = 0;i<arr.size();i++)
+    {
+        int sum = arr[i]-max;
+        if(sum > diffMax )
+        {
+            diffMax = sum;
+        }
+        if(sum < diffMax )
+        {
+            max = arr[i];
+        }
+        
+    }
+    return diffMax;
+}
+int main()
+{
+    int n ;
+    cout<<"Enter Array size : "<<endl;
+    cin>>n;
+    vector<int>arr(n);
+    for(int i = 0;i<arr.size();i++)
+    {
+        cin>>arr[i];
+    }
+    cout<<MaximumDifferenceBetweenTwoElements(arr);
+    return 0;
+}
