@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+string CheckPagram(string & s)
+{
+    set<char>let;
+    
+    for(int i = 0;i<s.length();i++)
+    {
+        char ch = tolower(s[i]);
+        if(ch>='a'&&ch<='z')
+        {
+            let.insert(ch);
+        }
+    }
+    
+    if(let.size()==26)
+    {
+        return "YES";
+    }
+    else
+    {
+        return "NO";
+    }
+}
+int main()
+{
+    string s;
+    cout<<"Enter String : "<<endl;
+    getline(cin,s);
+    
+    cout<<CheckPagram(s);
+}
